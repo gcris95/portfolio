@@ -4,29 +4,33 @@
 
 :root{
     --font-size: 100%;
-    --background: #F5F1E8;
-    --foreground: #1C1915;
-    --primary: #1C1915;
-    --primary-foreground: #F5F1E8;
+    --background: #f7f3ea;
+    --foreground: #434343;
+    --primary: #434343;
+    --primary-foreground: #f7f3ea;
     --muted: #E6E1D2;
-    --muted-foreground: #7A7262;
-    --accent: #B5522A;
-    --accent-foreground: #F5F1E8;
+    --muted-foreground: #635d50;
+    --accent: #980000;
+    --accent-foreground: #f7f3ea;
     --border: rgba(28, 25, 21, 0.12);
+    --font-weight-hard: 800;
     --font-weight-medium: 500;
     --font-weight-normal: 400;
+    --font-weight-light: 100;
+    --text-2xs: 0.675rem;
 }
 
 .dark {
-    --background: #1C1915;
-    --foreground: #F0EBE0;
-    --primary: #F0EBE0;
-    --primary-foreground: #1C1915;
+    --background: #434343;
+    --foreground: #f7f3ea;
+    --primary: #f7f3ea;
+    --primary-foreground: #434343;
     --muted: #2C2820;
     --muted-foreground: #9A9180;
     --accent: #C96B47;
-    --accent-foreground: #1C1915;
+    --accent-foreground: #434343;
     --border: rgba(240, 235, 224, 0.1);
+    --font-weight-hard: 800;
     --font-weight-medium: 500;
     --font-weight-normal: 400;
 }
@@ -56,18 +60,47 @@ html{
 
 h1 {
     font-family: var(--font-display);
+    font-weight: var(--font-weight-hard);
+    font-size: clamp(2.8rem, 7.5vw, 7rem);
+    color: var(--primary);
+}
+
+h2 {
+    font-family: var(--font-display);
     font-weight: var(--font-weight-medium);
     font-size: var(--text-3xl);
+    color: var(--primary);
 }
+
+h3 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-2xl);
+}  
+
+h4 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-xl);
+    color: var(--primary);
+} 
+
+h5 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-normal);
+    color: var(--primary);
+}   
 
 span {
     font-family: var(--font-mono);
-    font-weight: var(--font-weight-normal);
-    font-size: var(--text-xs);
+    font-weight: var(--font-weight-light);
+    font-size: var(--text-2xs);
 }
 
-p, button{
+p{
     font-family: var(--font-sans);
     font-weight: var(--font-weight-normal);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);    
 }
+
