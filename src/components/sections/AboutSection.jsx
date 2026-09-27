@@ -1,9 +1,10 @@
 import SectionTitle from "../SectionTitle";
 import FadeIn from "../FadeIn";
+import SectionContainer from "../SectionContainer"
 
 export default function AboutSection({id}){
     return(
-        <section id={id} className="px-[clamp(1rem,-2.64rem+15.53vw,16rem)] py-20 flex flex-col gap-8 border-b border-border">
+        <SectionContainer id={id} gap={8}>
             <SectionTitle number='02' title='About'/>
 
             <div className="flex flex-col md:flex-row-reverse gap-6">  
@@ -22,6 +23,6 @@ export default function AboutSection({id}){
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Portrait" />
                 </FadeIn>                                          
             </div>            
-        </section>
+        </SectionContainer>
     );
 }

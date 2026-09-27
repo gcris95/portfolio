@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export default function FadeIn({children, delay = 0, className = ""}) {
+export default function FadeIn({children, delay = 0, className = "", ...props}) {
   return (
     <motion.div
       className={className}
@@ -12,6 +12,7 @@ export default function FadeIn({children, delay = 0, className = ""}) {
         delay,
         ease: [0.25, 0.1, 0.25, 1],
       }}
+      {...props}
     >
       {children}
     </motion.div>

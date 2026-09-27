@@ -2,10 +2,11 @@ import SectionTitle from "../SectionTitle";
 import FadeIn from "../FadeIn";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { contacts } from "../../assets/data/contactsList";
+import SectionContainer from "../SectionContainer"
 
 export default function ContactSection({id}){
     return(
-        <section id={id} className="px-[clamp(1rem,-2.64rem+15.53vw,16rem)] py-20 flex flex-col gap-8 border-b border-border">
+        <SectionContainer id={id} gap={8}>
             <SectionTitle number='03' title='Get in Touch'/>
 
             <div className="flex flex-col md:flex-row-reverse gap-6">  
@@ -27,6 +28,6 @@ export default function ContactSection({id}){
                     </div>
                 </div>                                       
             </div>            
-        </section>
+        </SectionContainer>
     );
 }

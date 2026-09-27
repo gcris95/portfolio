@@ -1,4 +1,5 @@
 import FadeIn from "../FadeIn";
+import SectionContainer from "../SectionContainer"
 
 export default function HeroSection({id=''}){
 
@@ -7,7 +8,7 @@ export default function HeroSection({id=''}){
     }
 
     return(
-        <section id={id} className="px-[clamp(1rem,-2.64rem+15.53vw,16rem)] py-20 flex flex-col gap-2 border-b border-border">
+        <SectionContainer id={id} gap={2}>
             <FadeIn delay={0.1}>
                 <span className="text-accent uppercase" style={{ fontSize: 'clamp(0.8rem, 2vw, 0.95rem)' }}>UI Designer &amp; Developer</span>
             </FadeIn>
@@ -21,6 +22,6 @@ export default function HeroSection({id=''}){
                 <button onClick={() => scrollTo('works')} className="px-3 py-3 bg-primary text-primary-foreground text-sm font-medium hover:opacity-75 transition-opacity cursor-pointer font-sans">View Works</button>
                 <button onClick={() => scrollTo('contacts')} className="px-3 py-3 text-primary border border-border text-sm font-medium hover:bg-muted transition-colors cursor-pointer font-sans">Contact Me</button>
             </FadeIn>
-        </section>
+        </SectionContainer>
     );
 }

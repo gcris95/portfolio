@@ -3,7 +3,7 @@ import './index.css'
 import Navbar from './components/layout/navbar.jsx';
 import HeroSection from './components/sections/HeroSection.jsx';
 import Marquee from './components/sections/Marquee.jsx';
-import ProjectsSection from './components/sections/Projects.jsx';
+import ProjectsSection from './components/sections/ProjectsSection.jsx';
 import AboutSection from './components/sections/AboutSection.jsx';
 import ContactSection from './components/sections/ContactSection.jsx';
 import Footer from './components/layout/Footer.jsx';
