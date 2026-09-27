@@ -21,14 +21,14 @@
 }
 
 .dark {
-    --background: #434343;
+    --background: #4B5842;
     --foreground: #f7f3ea;
     --primary: #f7f3ea;
-    --primary-foreground: #434343;
+    --primary-foreground: #383F51;
     --muted: #2C2820;
-    --muted-foreground: #9A9180;
-    --accent: #C96B47;
-    --accent-foreground: #434343;
+    --muted-foreground: #beb5a4;
+    --accent: #980000;
+    --accent-foreground: #383F51;
     --border: rgba(240, 235, 224, 0.1);
     --font-weight-hard: 800;
     --font-weight-medium: 500;
@@ -104,3 +104,28 @@ p{
     font-size: var(--text-sm);    
 }
 
+.marquee-group {
+  animation: marquee linear infinite;
+}
+.marquee:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-group { animation: none; }
+}
+
+/* Disattiva il cross-fade di default: l'animazione la gestiamo noi via JS */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* Il nuovo tema si espande sopra quello vecchio */
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
