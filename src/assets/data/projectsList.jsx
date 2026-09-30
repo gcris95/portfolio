@@ -6,7 +6,7 @@ export const projects = [
         descriptionIt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         tags: ['React', 'Tailwind CSS'],
         image: 'src/assets/oppo.jpg',
-        href: ''
+        href: 'https://www.example.com/'
     },
     {
         title: 'Project 2',
@@ -15,6 +15,6 @@ export const projects = [
         descriptionIt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         tags: ['React', 'Vue.JS'],
         image: 'src/assets/oppo.jpg',
-        href: ''
+        href: 'https://www.example.com/'
     }
 ];

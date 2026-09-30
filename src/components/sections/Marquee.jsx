@@ -1,9 +1,9 @@
-import { siReact, siVuedotjs, siTailwindcss, siTypescript, siVite, siFigma, siUnity, siNpm } from 'simple-icons';
+import {siMilanote, siReact, siGit, siTrello, siTailwindcss, siTypescript, siVite, siFigma, siUnity, siNpm, siCss, siCplusplus, siC, siPython} from 'simple-icons';
 
-const stack = [siReact, siTailwindcss, siTypescript, siVite, siFigma, siUnity, siNpm];
+const stack = [siMilanote, siGit, siTrello, siReact, siTailwindcss, siTypescript, siVite, siFigma, siUnity, siNpm, siCss, siCplusplus, siC, siPython];
 
-const MIN_ITEMS = 24;      // elementi minimi per gruppo (aumenta se lo schermo è molto largo)
-const SECONDS_PER_ITEM = 5; // controlla la velocità: più basso = più veloce
+const MIN_ITEMS = 24;
+const SECONDS_PER_ITEM = 5; 
 
 export default function Marquee({ items = stack }) {
   const repeat = Math.ceil(MIN_ITEMS / items.length);
@@ -30,7 +30,8 @@ export default function Marquee({ items = stack }) {
                 aria-label={g === 0 ? icon.title : undefined}
                 className="h-7 w-7 fill-current"
               >
-                <path d={icon.path} />
+                <title>{icon.title}</title>
+                <path d={icon.path}/>                 
               </svg>
             </li>
           ))}

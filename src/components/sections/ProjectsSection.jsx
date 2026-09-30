@@ -1,35 +1,20 @@
-import { useState } from "react"
 import { projects } from "../../assets/data/projectsList"
 import Project from "../Project"
 import SectionTitle from "../SectionTitle"
 import SectionContainer from "../SectionContainer"
 
-export default function ProjectsSection({id}){
-    const [hoveredIndex, setHoveredIndex] = useState(null)
-
+export default function ProjectsSection({id, italian = true}){
     return(
         <SectionContainer id={id} gap={8}>
             <SectionTitle number='01' title='Selected Projects'/>
     
-            <div className="flex flex-col">
-                {projects.map((project, index) => (
+            <div className="group/list flex flex-col">
+                {projects.map((project) => (
                     <div
                         key={project.title}
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                        className="transition-opacity duration-300 not-last:mb-8"
-                        style={{
-                            opacity: hoveredIndex === null || hoveredIndex === index ? 1 : 0.4
-                        }}
+                        className="first:border-t border-b border-border transition-opacity duration-300 group-hover/list:opacity-40 hover:opacity-100!"
                     >
-                        <Project
-                            title={project.title}
-                            date={project.date}
-                            description={project.descriptionIt}
-                            tags={project.tags}
-                            image={project.image}
-                            link={project.href}
-                        />
+                        <Project {...project} description={italian? project.descriptionIt: project.descriptionEng} />
                     </div>
                 ))}
             </div>
