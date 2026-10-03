@@ -1,15 +1,15 @@
-import {GithubIcon, Mail01Icon, Linkedin,InternetIcon} from '@hugeicons/core-free-icons'
+import {GithubIcon, Mail01Icon, Linkedin, GameController03Icon} from '@hugeicons/core-free-icons'
 
 export const contacts = [
     {
         icon: GithubIcon,
-        contact: 'github.com/giovannicriscuolo',
-        href: 'https://github.com/giovannicriscuolo'
+        contact: 'github.com/gcris95',
+        href: 'https://github.com/gcris95?tab=repositories'
     },
     {
         icon: Mail01Icon,
-        contact: 'giovanni.criscuolo@example.com',
-        href: 'mailto:giovanni.criscuolo@example.com'
+        contact: 'giovannicriscuolo95@gmail.com',
+        href: 'mailto:giovannicriscuolo95@gmail.com'
     },
     {
         icon: Linkedin,
@@ -17,7 +17,7 @@ export const contacts = [
         href: 'https://linkedin.com/in/giovannicriscuolo'
     },
     {
-        icon: InternetIcon,
+        icon: GameController03Icon,
         contact: 'game development portfolio',
         href: 'https://giovannicriscuolo.example.com'
     },
