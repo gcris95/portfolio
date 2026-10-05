@@ -11,7 +11,7 @@ import { MotionConfig } from 'motion/react';
 
 export default function App() {
     const [dark, setDark] = useState(getInitialTheme);
-    const [italian, setItalian] = useState(getInitialLanguage);
+    const [italian, setItalian] = useState(false);
 
     function getInitialTheme() {
         try {

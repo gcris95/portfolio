@@ -29,7 +29,7 @@ export default function Marquee({ items = stack }) {
             <li
               key={`${g}-${i}`}
               style={{ '--brand': `#${icon.hex}` }}
-              className="px-6 md:px-8 text-primary transition-colors hover:text-(--brand)"
+              className="px-6 md:px-10 text-primary transition-colors hover:text-(--brand)"
             >
               <svg
                 viewBox={icon.viewBox ?? '0 0 24 24'}
