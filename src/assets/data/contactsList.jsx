@@ -19,6 +19,6 @@ export const contacts = [
     {
         icon: GameController03Icon,
         contact: 'game dev portfolio',
-        href: 'https://giovannicriscuolo.example.com'
+        href: 'https://giovannicriscuolo9.wixstudio.com/portfolio'
     },
 ];
